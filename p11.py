@@ -7,9 +7,8 @@ if(a>b):
 else:
     print("b is greater")
 
-c=30
-d=20
-if(c<d):
-    print("c is less than d")
+age=20
+if(age>18):
+    print("Can Vote")
 else:
-    print("d is less than c")
+    print("Cannot Vote")
