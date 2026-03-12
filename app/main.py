@@ -1,5 +1,6 @@
 #Arjun(Backend)
 #Added new feature in Github
+#Added Router
 from fastapi import FastAPI
 from app.routes import auth
 
@@ -14,3 +15,4 @@ def read_root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
