@@ -5,7 +5,8 @@ router = APIRouter()
 
 users = []
 
-
-@router.post("/users/list")
+@router.post("/users")
 def create_user(name:str):
     return add_user(name)
+
+
