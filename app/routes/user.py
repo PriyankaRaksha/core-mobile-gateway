@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from app.services.user_service import add_user
 
 router = APIRouter()
 
@@ -6,5 +7,6 @@ users = []
 
 @router.post("/users")
 def create_user(name:str):
-    users.append(name)
-    return {"user":name}
+    return add_user(name)
+
+
