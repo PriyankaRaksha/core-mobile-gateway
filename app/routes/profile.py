@@ -6,6 +6,6 @@ router = APIRouter()
 def get_profile(username: str):
     return {
         "username": username,
-        "role": "user",
+        "role": "developer",
         "status": "active"
     }
