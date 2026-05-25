@@ -6,3 +6,10 @@ def authenticate_request(token):
 
     return user
 
+def refresh_token(user):
+    token = generate_jwt(user)
+
+    return {
+        "token": token,
+        "expires_in": 3600
+    }
