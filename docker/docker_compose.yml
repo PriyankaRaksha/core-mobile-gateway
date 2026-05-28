@@ -5,3 +5,8 @@ services:
     build: .
     ports:
       - "8000:8000"
+  
+  gateway:
+    image: core:v2
+    replicas: 2
+      
