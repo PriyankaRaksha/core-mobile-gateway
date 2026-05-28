@@ -13,3 +13,6 @@ def refresh_token(user):
         "token": token,
         "expires_in": 3600
     }
+
+def get_user_permissions(user):
+    return permissions.get(user["role"], [])
