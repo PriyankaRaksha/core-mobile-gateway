@@ -16,3 +16,8 @@ def refresh_token(user):
 
 def get_user_permissions(user):
     return permissions.get(user["role"], [])
+
+def logout_user(user_id):
+    cache.delete(f"session:{user_id}")
+
+    return True
