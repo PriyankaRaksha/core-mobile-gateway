@@ -24,3 +24,8 @@ def logout_user(user_id):
         cache.delete(session_key)
 
     return {"status": "logged_out"}
+
+def invalidate_session(user_id):
+    session_key = f"session:{user_id}"
+
+    return cache.exists(session_key)
