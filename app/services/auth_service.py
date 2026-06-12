@@ -18,6 +18,9 @@ def get_user_permissions(user):
     return permissions.get(user["role"], [])
 
 def logout_user(user_id):
-    cache.delete(f"session:{user_id}")
+    session_key = f"session:{user_id}"
 
-    return True
+    if cache.exists(session_key):
+        cache.delete(session_key)
+
+    return {"status": "logged_out"}
