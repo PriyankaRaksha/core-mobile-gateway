@@ -4,3 +4,8 @@ function dashboard(user) {
         <p>Authenticated</p>
     `;
 }
+
+function showSessionExpiry(time) {
+    document.getElementById("session").innerHTML =
+        `<p>Session expires in ${time} sec</p>`;
+}
