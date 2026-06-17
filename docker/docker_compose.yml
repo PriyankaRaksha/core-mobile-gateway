@@ -10,3 +10,5 @@ services:
     image: core:v2
     replicas: 2
       
+environment:
+  - ENABLE_ROLE_CACHE=true
