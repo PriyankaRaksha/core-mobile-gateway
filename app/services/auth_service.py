@@ -29,3 +29,11 @@ def invalidate_session(user_id):
     session_key = f"session:{user_id}"
 
     return cache.exists(session_key)
+
+def refresh_token(user):
+    token = generate_jwt(user)
+
+    return {
+        "token": token,
+        "expires_in": 3600
+    }
