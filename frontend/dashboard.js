@@ -5,12 +5,14 @@ function dashboard(user) {
     `;
 }
 
-function showSessionExpiry(time) {
-    document.getElementById("session").innerHTML =
-        `<p>Session expires in ${time} sec</p>`;
-}
-
 function clearSessionUI() {
     document.getElementById("session").innerHTML =
         "<p>Logged out</p>";
+}
+
+function showSessionExpiry(time) {
+  const sessionElement = document.getElementById("session");
+  if (sessionElement) {
+    sessionElement.textContent = `Session expires in ${time} sec`;
+  }
 }
