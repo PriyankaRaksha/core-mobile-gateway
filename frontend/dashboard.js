@@ -9,3 +9,8 @@ function showSessionExpiry(time) {
     document.getElementById("session").innerHTML =
         `<p>Session expires in ${time} sec</p>`;
 }
+
+function clearSessionUI() {
+    document.getElementById("session").innerHTML =
+        "<p>Logged out</p>";
+}
