@@ -37,3 +37,14 @@ def refresh_token(user):
         "token": token,
         "expires_in": 3600
     }
+
+def record_session_activity(user_id, action, session_id):
+    activity = {
+        "user_id": user_id,
+        "session_id": session_id,
+        "action": action,
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    }
+
+    save_activity_log(activity)
+    return activity
